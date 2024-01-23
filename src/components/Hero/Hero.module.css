@@ -8,7 +8,7 @@
 }
 
 .heroInner {
-  margin-left: 150px;
+  margin-right: 150px;
   flex-direction: column;
   z-index: 10;
 }

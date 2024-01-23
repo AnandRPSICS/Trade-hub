@@ -20,20 +20,25 @@ const UserLogin = () => {
       <Container
         id="signup-form"
         fluid
-        className="border h-75 w-75 rounded d-flex"
+        className="border ps-0 h-75 w-75 rounded d-flex"
       >
-        <Container fluid className="w-50 h-100 border">
-          <Image className="w-100" src={loginImg} alt="barter" />
+        <Container fluid className="p-0 w-50 h-100 border">
+          {/* <Image className="w-100" src={loginImg} alt="barter" /> */}
+          <Image
+            className="w-100 "
+            src="https://img.freepik.com/free-vector/falling-coins-concept-illustration_114360-22888.jpg?w=740&t=st=1706025795~exp=1706026395~hmac=1cd765d8b1e3ff89501d36c1c2940958985d00d20c1020f88cff88844164e8be"
+            alt="barter"
+          />
         </Container>
         <Form
-          noValidate
+          noValidatep
           validated={validated}
           onSubmit={handleSubmit}
           className="w-50 h-100 border p-3"
         >
           <h2 className="text-center"> Login</h2>
 
-          <Form.Group>
+          <Form.Group className="mt-5">
             <Row>
               <Col xs={3}>
                 <Form.Label>Email</Form.Label>
@@ -67,9 +72,16 @@ const UserLogin = () => {
               </p>
             </Col>
           </Row>
-          <Row>
-            <Col>
-                <p> Don't have an account ? <span> Create</span></p>
+          <Row className="mt-5">
+            <Col className="center">
+              <p>
+                {" "}
+                Don't have an account ?{" "}
+                <span className="text-decoration-underline text-primary">
+                  {" "}
+                  Create an account
+                </span>
+              </p>
             </Col>
           </Row>
           <Button className="mt-3 mx-auto center" type="submit">

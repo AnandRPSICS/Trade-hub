@@ -1,7 +1,7 @@
 .navbarWrapper {
   width: 100%;
   z-index: 10000;
-
+  height: 60px;
   position: relative;
 }
 a {
@@ -21,7 +21,8 @@ a {
 
 .navRight {
   width: 100%;
-  justify-content: space-between;
+
+  justify-content: space-between !important;
 }
 
 .navLinksWrapper {
@@ -61,7 +62,6 @@ a {
   padding: 0.7rem 1.1rem;
   /* background-color: red; */
 }
-
 
 .signup {
   border-radius: 50px;

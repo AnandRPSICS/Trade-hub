@@ -2,8 +2,10 @@
     min-height: 600px;
     display: flex;
     align-items: center;
+    color: white;
     justify-content: center;
     background-color: white;
+    background-image: url('https://images5.alphacoders.com/366/366327.jpg');
 }
 
 #signup-form {

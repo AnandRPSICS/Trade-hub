@@ -7,14 +7,14 @@ export const features = [
       "https://d2guulkeunn7d8.cloudfront.net/assets/homepage/how_it_works-163dcc1c8f91c63d7b0bdb648b5370a89267d54c8cb90bd858495395b8a9e5f3.jpg",
   },
   {
-    feature: "Engage in Real-time Connections",
+    feature: "Real Exchanges",
     description:
-      "Once you've identified your desired items, our community-driven platform connects you with like-minded individuals.",
+      "Once you've identified your desired items, our community-driven platform connects.",
     image:
       "https://d2guulkeunn7d8.cloudfront.net/assets/homepage/real_time_updates-8330ec94f4d8006c6732bb2f65141e3596dcd3be02b0bf0376dcf5e2895fe37e.jpg",
   },
   {
-    feature: "Experience Seamless Exchanges",
+    feature: "Seamless Exchanges",
     description:
       "With TradeHub's commitment to transparency and fairness, enjoy a seamless experience ",
     image:
