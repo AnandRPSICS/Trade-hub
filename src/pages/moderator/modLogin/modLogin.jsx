@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { Container, Image, Row, Col, Form, Button } from "react-bootstrap";
+import rocketImg from "../../../assets/images/rocket-img.png";
 import loginImg from "../../../assets/images/signup-img.jpg";
-import "./userLogin.css";
+import manTypingImg from "../../../assets/images/man-typing-img.png";
+import "./modLogin.css";
 
-const UserLogin = () => {
+const ModLogin = () => {
   const [validated, setValidated] = useState(false);
 
   const handleSubmit = (event) => {
@@ -16,17 +18,17 @@ const UserLogin = () => {
   };
 
   return (
-    <Container id="user-signup-container" fluid className="w-100">
+    <Container id="mod-signup-container" fluid className="w-100">
       <Container
-        id="signup-form"
+        id="mod-form"
         fluid
         className="border ps-0 h-75 w-75 rounded d-flex"
       >
-        <Container fluid className="p-0 w-50 h-100 border center">
+        <Container fluid className="p-0 w-50 h-100 border pt-5">
           {/* <Image className="w-100" src={loginImg} alt="barter" /> */}
           <Image
-            className="w-100 mt-5"
-            src="https://img.freepik.com/free-vector/business-team-brainstorm-idea-lightbulb-from-jigsaw-working-team-collaboration-enterprise-cooperation-colleagues-mutual-assistance-concept-pinkish-coral-bluevector-isolated-illustration_335657-1651.jpg"
+            className="w-100"
+            src={manTypingImg}
             alt="barter"
           />
         </Container>
@@ -36,9 +38,9 @@ const UserLogin = () => {
           onSubmit={handleSubmit}
           className="w-50 h-100 border p-3"
         >
-          <h2 className="text-center"> Login</h2>
+          <h2 className="text-center text-dark">Moderators Login</h2>
 
-          <Form.Group className="mt-5">
+          <Form.Group className="mt-5 text-dark">
             <Row>
               <Col xs={3}>
                 <Form.Label>Email</Form.Label>
@@ -51,7 +53,7 @@ const UserLogin = () => {
               </Col>
             </Row>
           </Form.Group>
-          <Form.Group className="mt-3">
+          <Form.Group className="mt-3 text-dark">
             <Row>
               <Col xs={3}>
                 <Form.Label>Password</Form.Label>
@@ -67,14 +69,14 @@ const UserLogin = () => {
           <Row>
             <Col xs={6}></Col>
             <Col>
-              <p className="text-end">
+              <p className="text-end text-dark">
                 <i>Forgot password?</i>
               </p>
             </Col>
           </Row>
           <Row className="mt-5">
             <Col className="center">
-              <p>
+              <p className="text-dark">
                 {" "}
                 Don't have an account ?{" "}
                 <span className="text-decoration-underline text-primary">
@@ -92,4 +94,4 @@ const UserLogin = () => {
     </Container>
   );
 };
-export default UserLogin;
+export default ModLogin;
