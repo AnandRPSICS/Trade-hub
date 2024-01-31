@@ -5,6 +5,8 @@ import UserSignup from "./pages/user/userSignup/userSignup";
 import UserLogin from "./pages/user/userLogin/userLogin";
 import ModLogin from "./pages/moderator/modLogin/modLogin";
 import DeliveryLogin from "./pages/delivery/deliveryLogin/deliveryLogin";
+import ModSignup from "./pages/moderator/modSignup/modSignup";
+import DelSignup from "./pages/delivery/deliverySignup/delSignup";
 
 const App = () => {
 
@@ -20,8 +22,10 @@ const App = () => {
           
           {/* moderators  */}
           <Route path="/mod/login" element={<ModLogin/>} />
+          <Route path="/mod/signup" element={<ModSignup/>} />
 
           {/* delivery  */}
+          <Route path="/delivery/signup" element={<DelSignup/>} />
           <Route path="/delivery/login" element={<DeliveryLogin/>} />
           
           

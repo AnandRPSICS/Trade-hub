@@ -1,11 +1,16 @@
-import React from "react";
+import { useState } from "react";
 import { Col, Container, Row, Image } from "react-bootstrap";
 import cactusImg from "../../../assets/images/cactus.png";
 import typingGirlImg from "../../../assets/images/typing-girl-img.png";
-import "./userSignup.css";
 import UserSignupForm from "./userSignupForm";
+import "./userSignup.css";
 
 const UserSignup = () => {
+  const [signupBtnClicked, setSignupBtnClicked] = useState(false);
+  function clickSignupBtn() {
+    setSignupBtnClicked(true);
+  }
+
   return (
     <Container fluid className="user-signup-container center">
       <Row
@@ -18,8 +23,18 @@ const UserSignup = () => {
             WELCOME TO <span> TRADE HUB</span>{" "}
           </h3>
 
+          <p
+            className={`${signupBtnClicked && "signup-caption"} my-2`}
+            style={{ fontSize: "14px", color: "gray" }}
+          >
+            <i>
+              Welcome to our Trade Hub,Join the exchange revolution and
+              rediscover the art of trading
+            </i>
+          </p>
+
           <Container style={{ height: "88%" }} fluid className="p-0">
-            <UserSignupForm />
+            <UserSignupForm signupBtnClicked={signupBtnClicked} clickSignupBtn={clickSignupBtn} />
           </Container>
         </Col>
 

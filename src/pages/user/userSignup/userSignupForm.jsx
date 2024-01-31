@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import "./userSignupForm.css";
-const UserSignupForm = () => {
+const UserSignupForm = ({ signupBtnClicked, clickSignupBtn }) => {
   const navigate = useNavigate();
   const [userData, setUserData] = useState({
     fullName: "",
@@ -32,6 +32,7 @@ const UserSignupForm = () => {
   // form validation
   const handleSubmit = (event) => {
     event.preventDefault();
+    clickSignupBtn();
     const form = event.currentTarget;
     if (form.checkValidity() === false) {
       event.stopPropagation();
@@ -99,6 +100,7 @@ const UserSignupForm = () => {
       noValidate
       validated={validated}
       onSubmit={handleSubmit}
+    
     >
       <div className="signup-form-flex-div">
         <Form.Group>
@@ -256,7 +258,7 @@ const UserSignupForm = () => {
         </p>
       </div>
 
-      <div className="center">
+      <div className={`center ${!signupBtnClicked && 'mt-4'}`}>
         <Button id="user-signup-btn" type="submit">
           Sign UP
         </Button>
